@@ -1,0 +1,60 @@
+// C++ code
+//
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(11, 10, 6, 5, 4, 3);
+
+float celsius = 0;
+int trig = 13;
+int echo = 12;
+int dist = 0;
+int senha = 0;
+int baselineTemp = 0;
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  lcd.begin(16, 2);
+  Serial.begin(9600);
+  pinMode(echo, INPUT);
+  pinMode(trig, OUTPUT);
+}
+
+void loop()
+{
+  celsius = map(((analogRead(A0) - 20) * 3.04), 0, 1023, -40, 125);
+  
+  digitalWrite(trig,LOW);
+  delayMicroseconds(5);        
+  digitalWrite(trig,HIGH);  
+  delayMicroseconds(10);      
+  digitalWrite(trig,LOW);
+  
+  dist = pulseIn(echo,HIGH);      
+  dist = dist/58;
+  
+  if (dist = 40 && celsius > 39) {
+  	senha = 100;
+    lcd.setCursor(0,0);
+    lcd.print("Alto ");
+    lcd.setCursor(0,1);
+    lcd.print(senha);
+    senha = senha + 1;
+  }
+  else if (dist = 40 && celsius < 39 && celsius > 36.9){
+  	senha = 200;
+    lcd.setCursor(0,0);
+    lcd.print("Medio");
+    lcd.setCursor(0,1);
+    lcd.print(senha);
+    senha = senha + 1;
+  }
+  else{
+  	senha = 300;
+    lcd.setCursor(0,0);
+    lcd.print("Baixo");
+    lcd.setCursor(0,1);
+    lcd.print(senha);
+    senha = senha + 1;
+  }
+}
