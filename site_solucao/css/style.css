@@ -1,0 +1,154 @@
+/* Estilo Geral */
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Roboto', sans-serif ;
+   
+}
+
+body{
+    background-color: #DE923E;
+}
+
+input {
+    border-radius: 5px;
+}
+
+.button {
+    margin-bottom: 20px;
+    background: #0b841c;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+.form-control {
+    margin: 25px;
+}
+
+/* Estilo da página Home */
+.container_home {
+    display: flex;
+    justify-content: center;
+}
+
+.link{
+    margin: 100px;
+}
+
+.button-login {
+    width: 450px;
+    height: 350px;
+    border: 3px solid #0b841c;
+    margin: 80px auto;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 2px 2px 2px #000;
+    color: #0b841c;
+    cursor: pointer;
+}
+
+.imagem-botao {
+    width: 425px;
+    height: 250px;
+}
+
+/* Estilo das páginas de Login */
+.container-login {
+    width: 300px;
+    height: 250px;
+    border: 3px solid #0b841c;
+    background: #fff;
+    box-shadow: 2px 2px 2px #000;
+    color: #0b841c;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Estilo da página prescrição */
+.container-prescricao {
+    width: 400px;
+    height: 325px;
+    border: 3px solid #0b841c;
+    background: #fff;
+    box-shadow: 2px 2px 2px #000;
+    color: #0b841c;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Estilo da página de medicamentos */
+.imagem-medicamento {
+    width: 245px;
+    height: 292px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.botao{
+    width: 70px;
+    height: 42px;
+    background-color: #0B8A1C;;
+    font-family: Inter;
+}
+.pesquisa {
+    width: 399px;
+    height: 38px;
+    background-color: #fff;
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    outline: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.descricao-medicamento{
+    margin-left: 10px;
+}
+
+h3 {
+    border-bottom: 0.5px solid black;
+}
+
+.instrucoes {
+    display: flex;
+}
+
+
+.nao-entendi{
+    background-color: #800000;
+    color: #e0d2d2;
+    width: 209px;
+    height: 30px;
+    border-radius: 20px;
+    font-family: Inter;
+    margin-top: 120px;
+    outline: none;
+}
+
+/* Estilização dos erros */
+#error {
+    color: red;
+}
+
+.error {
+    color: red;
+    text-align: left;
+    padding: 6px;
+    
+}
